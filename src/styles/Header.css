@@ -55,6 +55,13 @@ header.header{
     display:none;
 }
 
+.hamburgerBtn{
+    display:none;
+}
+.closeMenuBtn{
+    display:none;
+}
+
 @media(max-width:860px){
     header.header{
         display:flex;  
@@ -116,6 +123,7 @@ header.header{
         color:#f4f4f4;
     } 
     .hamburgerBtn{
+        display:flex;
         cursor:pointer;
         padding: 0.2rem;
         background:transparent;
