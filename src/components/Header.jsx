@@ -1,12 +1,17 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
  import Navigation from './Navigation'
  import Logo from '../assets/A__1_-removebg-preview.png'
  import '../styles/Header.css'
- import { useState } from 'react'
+ import { useState, useEffect } from 'react'
  import HamburgerIcon from '/icons/hamburger.svg'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
+  const location = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setShowMenu(false)
+  }, [location])
 
   return (
     <header className='header'> 

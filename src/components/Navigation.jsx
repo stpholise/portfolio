@@ -9,8 +9,8 @@ const Navigation = ({ setShowMenu , showMenu = false  }) => {
     {value: '/about', label: 'About'},
     {value: '/projects', label:'Projects'},
     {value: '/skills', label:'Skills'},
-    {value: '/resume', label:'Resume'},
-    {value: '/contact', label:'Contact'}
+    // {value: '/resume', label:'Resume'},
+    // {value: '/contact', label:'Contact'}
   ]
 
   
