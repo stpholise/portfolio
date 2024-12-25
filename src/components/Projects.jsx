@@ -1,6 +1,10 @@
 import '../styles/Projects.css'
 import LinkExternal from '/icons/link-external.svg'
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 import AdviceGenerator from '../assets/images/advice-generator.jpeg'
 import ArticleReview from '../assets/images/article-preview-desktop-design.jpg'
@@ -27,8 +31,12 @@ import SocialDashboard from '../assets/images/social-dashboard.jpg'
 import Sunnyside from '../assets/images/sunnyside.jpg'
 import TipCalculator from '../assets/images/tip-calculator.jpg'
 
-const Projects = () => {
 
+
+const Projects = () => {
+    const [projectsList, setProjectsList] = useState( 6)
+    const location = useLocation()
+   
     const projects = [
         {   title: 'Advice Generator', 
             description: 'A simple advice generator that fetches advice from an API.', 
@@ -151,15 +159,26 @@ const Projects = () => {
         },
 
     ]
+    useEffect(() => {
+        AOS.init()
+         if(location.pathname === '/projects') {
+            setProjectsList(projects.length)
+         }else {
+            setProjectsList(6)
+         }
+    },[projectsList, location.pathname, projects.length])
 
     return (
-        <div className='projectsSection'>
+        <div className={'projectsSection'  + (location.pathname === '/projects' ? ' projectsFull' : '')}>
             <h3 className="sectionHeading"> PROJECTS </h3>
-            <div className="projects">
+            <div className={"projects"}>
                 {
-                    projects.slice(0, 6).map((projects, index) => (
+                    projects.slice(0, projectsList).map((projects, index) => (
                         <a href={projects.link} target="_blank" key={index} rel="noreferrer" className="projectLink">
-                            <div  className="projectCard">
+                            <div  className="projectCard" 
+                            { ...index % 2 === 0 ? { 'data-aos': 'fade-right' } : { 'data-aos': 'fade-left' } }
+                                data-aos-duration="1000"
+                            >
                                 <img src={projects.image} alt="Project Image" className="projectImage" />
                                 <div className="projectText">
                                     <h3 className="projectTitle">{projects.title}</h3>
