@@ -30,6 +30,8 @@ import ShoeSales from '../assets/images/Screenshot_18-3-2024_61021_stpholise.git
 import SocialDashboard from '../assets/images/social-dashboard.jpg'
 import Sunnyside from '../assets/images/sunnyside.jpg'
 import TipCalculator from '../assets/images/tip-calculator.jpg'
+import AccountAnalysis from '../assets/images/Screenshot_25-12-2024_105229_figma2-psi.vercel.app.jpeg'
+import TalentPool from '../assets/images/job-seeker-app.jpeg'
 
 
 
@@ -38,122 +40,156 @@ const Projects = () => {
     const location = useLocation()
    
     const projects = [
+        {   title: 'TalentPool', 
+            description: 'A simple advice generator that fetches advice from an API.',
+            stack: ['HTML', 'CSS', 'React', 'Redux', 'API', 'Formik', 'Yup', ], 
+            image: TalentPool, 
+            link: 'https://job-seeker-dashboard.vercel.app/' },
+        {   title: 'Account Analysis', 
+            description: 'A simple advice generator that fetches advice from an API.',
+            stack: ['HTML', 'CSS', 'React', ], 
+            image: AccountAnalysis, 
+            link: 'https://figma2-psi.vercel.app/' },
         {   title: 'Advice Generator', 
-            description: 'A simple advice generator that fetches advice from an API.', 
+            description: 'A simple advice generator that fetches advice from an API.',
+            stack: ['HTML', 'CSS', 'JavaScript', 'API'], 
             image: AdviceGenerator, 
             link: 'https://stpholise.github.io/advice-generator/' },
         {   title: 'Article Preview', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: ArticleReview, 
             link: 'https://stpholise.github.io/article-preview-component-maste/'
         },
         {   title: 'Base Appreal', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: BaseAppreal, 
             link: 'https://stpholise.github.io/base-apparel/' 
         },
         {   title: 'Blogr', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: Blogr, 
             link: 'https://stpholise.github.io/blogr-landing-page-main/' 
         },
         {   title: 'Bookmark', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: Bookmark, 
             link: 'https://stpholise.github.io/bookmarklanding-page/' 
         },
         {   title: 'Calculator', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: Calculator, 
             link: 'https://stpholise.github.io/calculator-app-main/' 
         },
         {   title: 'ComingSoon', 
-            description: 'A simple article preview component.', 
+            description: 'A simple article preview component.',
+            stack: ['HTML', 'CSS', 'JavaScript'], 
             image: ComingSoon, 
-            link: 'https://github.com' 
+            link: ' https://stpholise.github.io/ping-coming-soon-page-master/' 
         },
         {   title: 'Faq', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: Faq, 
             link: 'https://stpholise.github.io/faq-accordion-card-main/' 
         },
         {   title: 'Flyo', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: Flyo, 
             link: 'https://stpholise.github.io/fylo-dark-theme-landing-page/' 
         },
         {   title: 'Insure', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: Insure, 
             link: 'https://stpholise.github.io/insure-landing-page/' 
         }, 
         {   title: 'Interactive Card', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: InteractiveCard, 
             link: 'InteractiveCard' 
         },
         {   title: 'Interactive Price', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: InteractivePrice, 
             link: 'https://stpholise.github.io/interactive-pricing-component/' 
         },
         {   title: 'Interactive Rating', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: InteractiveRating, 
             link: 'https://stpholise.github.io/interactive-rating-component/' 
         }, 
         {   title: 'Intro Component', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: IntroComponent, 
             link: 'https://stpholise.github.io/intro-component-with-signup/' 
         }, 
         {   title: 'Intro Section', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: IntroSection, 
             link: 'https://stpholise.github.io/intro-section-with-dropdown-navigation/' 
         }, 
         {   title: 'Loop Studio', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: LoopStudio, 
             link: 'https://stpholise.github.io/Loopstudios-landing-page/' 
         },
         {   title: 'News Homepage', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: NewsHomepage, 
             link: 'https://stpholise.github.io/news-homepage/' 
         },
         {   title: 'Notification Page', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: NotificationPage, 
             link: 'https://stpholise.github.io/notifications-page-main-main/' 
         },
         {   title: 'Pricing Component', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: PricingComponent, 
             link: 'https://stpholise.github.io/pricing-component-with-toggle-master/' 
         },
         {   title: 'Project Tracking', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: ProjectTracking, 
             link: 'https://stpholise.github.io/project-tracking-intro-component/' 
         },
         {   title: 'Shoe Sales', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: ShoeSales, 
             link: 'https://stpholise.github.io/myecommerce-landing-page/' 
         },
         {   title: 'Social Dashboard', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: SocialDashboard, 
             link: 'https://stpholise.github.io/social-media-dashboard-with-theme-switcher-master/' 
         },
         {   title: 'Sunnyside', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: Sunnyside, 
             link: 'https://stpholise.github.io/sunnyside-agency-landing-page-main/' 
         },
         {   title: 'TipCalculator', 
             description: 'A simple article preview component.', 
+            stack: ['HTML', 'CSS', 'JavaScript'],
             image: TipCalculator, 
             link: 'https://stpholise.github.io/tip-calculator-app-main/' 
         },
@@ -183,8 +219,17 @@ const Projects = () => {
                                 <div className="projectText">
                                     <h3 className="projectTitle">{projects.title}</h3>
                                     <img src={LinkExternal} alt="" className='smallIcon'/>
+
                                     {/* <p className="projectDescription">{projects.description}</p>  */}
                                 </div>  
+                                {
+                                    (projectsList > 6 && projects.stack && projects.stack.length > 0) &&  
+                                    <p className="projectStack">
+                                        {projects.stack.join(', ')}
+                                    </p>
+                                }
+
+                              
                             </div>
                         </a>
                     ))
@@ -192,8 +237,8 @@ const Projects = () => {
                 
                 
             </div>
-            
-            <Link className='viewAll' to='/projects'>View All</Link>
+            { projectsList <= 6 &&
+            <Link className='viewAll' to='/projects'>View All</Link>}
         </div>
     )
 }
