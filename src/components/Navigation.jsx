@@ -7,7 +7,7 @@
 const Navigation = ({ setShowMenu , showMenu = false  }) => {
   const pages = [
     {value: '/about', label: 'About'},
-    {value: '/Projects', label:'Projects'},
+    {value: '/projects', label:'Projects'},
     {value: '/skills', label:'Skills'},
     {value: '/resume', label:'Resume'},
     {value: '/contact', label:'Contact'}
@@ -23,7 +23,7 @@ const Navigation = ({ setShowMenu , showMenu = false  }) => {
         </button>
         {
           pages.map((item, index)=> (
-            <Link key={index} className={'navItem'}>
+            <Link key={index} to={item.value} className={'navItem'}>
               {item.label }
             </Link>
           ))

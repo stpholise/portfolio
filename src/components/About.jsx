@@ -1,5 +1,11 @@
- 
+ import { useEffect } from 'react';
+ import AOS from 'aos';
+  import 'aos/dist/aos.css';
+
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <div className="about">
         <h3 className="sectionHeading">ABOUT ME</h3>
@@ -20,28 +26,28 @@ const About = () => {
                 </p>
           <div className="develpementGrid">
               
-              <div className="developmentCard">
+              <div className="developmentCard" data-aos="fade-right">
                 <h4>Planning & Research</h4> 
                 <p>Understand the client’s goals, gather requirements, and set expectations for budget, timeline, and involvement. 
                   Create a sitemap, wireframes, and choose the appropriate technologies
                 </p>
               </div>
-              <div className="developmentCard">
+              <div className="developmentCard" data-aos="fade-left">
                 <h4>Design, Development & Content Integration</h4>
                 <p> Develop design mockups for client review, ensuring responsive design across devices.
                     Start coding the website with HTML, CSS, JavaScript, and any necessary backend integration, ensuring functionality and responsiveness.
                     Add client-provided content, optimize for SEO and performance, and ensure accessibility. 
                 </p>
               </div> 
-              <div className="developmentCard">
+              <div className="developmentCard" data-aos="fade-right">
                 <h4>Testing & QA</h4>
                 <p> Test for cross-browser compatibility, mobile responsiveness, functionality, and optimize performance.</p>
               </div>
-              <div className="developmentCard">
+              <div className="developmentCard" data-aos="fade-left">
                 <h4>Client Review</h4>
                 <p> Share the website preview for feedback, and make revisions as needed. </p>
               </div>
-              <div className="developmentCard">
+              <div className="developmentCard" data-aos="fade-right">
                 <h4>Launch & Post-Launch Support</h4>
                 <p> Launch the website, monitor performance, and provide post-launch support as needed.</p>
               </div> 
