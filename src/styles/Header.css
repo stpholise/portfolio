@@ -95,7 +95,7 @@ header.header{
         right:0;
         color:#fff;
         gap:1rem ;
-        justify-content:space-between;
+        justify-content:center;
         align-items:center;
         background-color: rgba(0, 0, 0, 0.9); 
         height:fit-content;
